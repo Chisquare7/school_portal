@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NavBar from "./components/navBar";
+import Home from "./pages/Home";
+import Signup from "./pages/Signup";
 
 function App() {
   const [students, setStudents] = useState([]);
@@ -9,7 +11,13 @@ function App() {
     <>
       <Router>
         <NavBar />
-        <Routes></Routes>
+        <Routes>
+          <Route path="/" element={<Home students={students} />} />
+          <Route
+            path="/signup"
+            element={<Signup students={students} setStudents={setStudents} />}
+          />
+        </Routes>
       </Router>
     </>
   );
