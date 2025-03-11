@@ -1,5 +1,5 @@
 import React from "react";
-import StudentForm from "../components/studentForm";
+import StudentForm from "../components/StudentForm_TEMP";
 
 const Signup = ({ students, setStudents }) => {
   return (
