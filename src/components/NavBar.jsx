@@ -15,10 +15,13 @@ const NavBar = ({ studentUser, setStudentUser }) => {
       <div className="max-w-4xl mx-auto flex justify-between items-center">
         <h1 className="text-xl font-bold">School Portal</h1>
         <div className="space-x-4">
+          <Link to="/" className="hover:text-gray-400">
+            Home
+          </Link>
           {!studentUser ? (
             <>
-              <Link to="/" className="hover:text-gray-400">
-                Student List
+              <Link to="/login" className="hover:text-gray-400">
+                Login
               </Link>
               <Link to="/signup" className="hover:text-gray-400">
                 Sign Up

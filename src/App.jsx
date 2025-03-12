@@ -31,7 +31,7 @@ function App() {
   return (
     <>
       <Router>
-        <NavBar />
+        <NavBar studentUser={studentUser} setStudentUser={setStudentUser} />
         <Routes>
           <Route path="/" element={<Home students={students} />} />
           <Route
