@@ -6,16 +6,28 @@ const StudentForm = ({ students, setStudents }) => {
   const [name, setName] = useState("");
   const [age, setAge] = useState("");
   const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
   const handleFormSubmit = (event) => {
     event.preventDefault();
-    if (name && age && email) {
-      setStudents([...students, { name, age, email }]);
+
+    // This checks if the email is already registered
+    const existingUser = students.find((student) => student.email === email);
+    if (existingUser) {
+      alert("Email already registered! Please log in.");
+      return;
+    }
+
+    if (name && age && email && password) {
+      setStudents([...students, { name, age, email, password }]);
       setName("");
       setAge("");
       setEmail("");
-      navigate("/");
+      setPassword("");
+
+      alert("Signup successful! You can now log in.");
+      navigate("/login");
     }
   };
 
@@ -62,9 +74,21 @@ const StudentForm = ({ students, setStudents }) => {
             required
           />
 
+          <label className="block text-gray-700 font-medium mb-1">
+            Student Password:
+          </label>
+          <input
+            type="password"
+            placeholder="Enter your password"
+            value={password}
+            onChange={(event) => setPassword(event.target.value)}
+            className="w-full p-3 border rounded-md border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500"
+            required
+          />
+
           <button
             type="submit"
-            className="w-full bg-green-500 text-white p-2 rounded-md text-lg font-semibold hover:bg-green-600 transition duration-200 cursor-pointer"
+            className="w-full bg-blue-500 text-white p-2 rounded-md text-lg font-semibold hover:bg-blue-600 transition duration-200 cursor-pointer"
           >
             Sign Up
           </button>

@@ -21,7 +21,7 @@ const NavBar = ({ studentUser, setStudentUser }) => {
                 Student List
               </Link>
               <Link to="/signup" className="hover:text-gray-400">
-                Student Sign Up
+                Sign Up
               </Link>
             </>
           ) : (
