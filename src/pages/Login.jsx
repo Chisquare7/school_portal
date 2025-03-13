@@ -37,7 +37,7 @@ const Login = ({ setStudentUser }) => {
             placeholder="Enter your Email"
             value={email}
             onChange={(event) => setEmail(event.target.value)}
-            className="w-full p-3 border rounded-md border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500"
+            className="w-full p-3 border rounded-md border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
             required
           />
           <label className="block text-gray-700 font-medium mb-1">
@@ -48,7 +48,7 @@ const Login = ({ setStudentUser }) => {
             placeholder="Enter your Password"
             value={password}
             onChange={(event) => setPassword(event.target.value)}
-            className="w-full p-3 border rounded-md border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500"
+            className="w-full p-3 border rounded-md border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
             required
           />
           <button

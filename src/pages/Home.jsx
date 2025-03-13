@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router";
-// import StudentList from "../components/StudentList";
 
 const Home = ({ students }) => {
   return (

@@ -46,7 +46,7 @@ const StudentForm = ({ students, setStudents }) => {
             placeholder="Enter your Full Name"
             value={name}
             onChange={(event) => setName(event.target.value)}
-            className="w-full p-3 border rounded-md border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500"
+            className="w-full p-3 border rounded-md border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
             required
           />
 
@@ -58,7 +58,7 @@ const StudentForm = ({ students, setStudents }) => {
             placeholder="Enter your Age"
             value={age}
             onChange={(event) => setAge(event.target.value)}
-            className="w-full p-3 border rounded-md border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500"
+            className="w-full p-3 border rounded-md border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
             required
           />
 
@@ -70,7 +70,7 @@ const StudentForm = ({ students, setStudents }) => {
             placeholder="Enter your Email"
             value={email}
             onChange={(event) => setEmail(event.target.value)}
-            className="w-full p-3 border rounded-md border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500"
+            className="w-full p-3 border rounded-md border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
             required
           />
 
@@ -82,7 +82,7 @@ const StudentForm = ({ students, setStudents }) => {
             placeholder="Enter your password"
             value={password}
             onChange={(event) => setPassword(event.target.value)}
-            className="w-full p-3 border rounded-md border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500"
+            className="w-full p-3 border rounded-md border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
             required
           />
 
